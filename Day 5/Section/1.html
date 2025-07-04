@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test</title>
+  <style>
+    body {
+      background-color: #0d5fd8;
+      text-align: center;
+      padding: 40px;
+      color: #333;
+      overflow: hidden;
+    }
+
+
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .image {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #000000;
+    }
+
+    p {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img class="image" src="https://www.thetimes.com/imageserver/image/%2Fb7caacbd-bc84-4f35-a0fb-d39e6ea76c6e.jpg?crop=5276%2C3517%2C0%2C0&resize=750&format=webp"/>
+    <h1>Diogo Jota, Liverpool footballer, dies in car accident aged 28</h1>
+    <p>The 28-year-old Portuguese forward died in the accident in the early hours of Thursday morning near Zamora, in northwestern Spain.
+
+His brother, Andre, was also killed in the crash on the Rias Bajas Highway (A-52) near Palacios de Sanabria, heading towards Benavente.</p>
+  </div>
+
+</body>
+</html>
