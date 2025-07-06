@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>test</title>
+   </head>
+   <body>
+      <button onclick="checkFaculty()">Check Faculty</button>
+      <script>
+         "use strict";
+         
+         function checkFaculty() {
+             let faculty = prompt("Enter your faculty:");
+             faculty = faculty.toLowerCase();
+             
+             // if (faculty === "fci") {
+             //     alert("You're eligible to Programming tracks");
+             // } else if (faculty === "engineering") {
+             //     alert("You're eligible to Network and Embedded tracks");
+             // } else if (faculty === "commerce") {
+             //     alert("You're eligible to ERP and Social media tracks");
+             // } else {
+             //     alert("You're eligible to SW fundamentals track");
+             // }
+             
+             let message;
+             switch (faculty) {
+                 case "fci":
+                     message = "You're eligible to Programming tracks";
+                     break;
+                 case "engineering":
+                     message = "You're eligible to Network and Embedded tracks";
+                     break;
+                 case "commerce":
+                     message = "You're eligible to ERP and Social media tracks";
+                     break;
+                 default:
+                     message = "You're eligible to SW fundamentals track";
+             }
+             
+             alert(message);
+         }
+      </script>
+   </body>
+</html>

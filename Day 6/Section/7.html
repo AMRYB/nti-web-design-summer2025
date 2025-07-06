@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <button onclick="calculateExpression()">Calculate Expression</button>
+
+    <script>
+        "use strict";
+        
+        function calculateExpression() {
+            let expression = prompt("Enter math expression (e.g., 3+4*5/10*8):");
+            
+            let result = evaluateExpression(expression);
+            alert("You entered: " + expression + ", and the result is: " + result);
+        }
+        
+        function evaluateExpression(expression) {      
+            try {
+                let result = Function('"use strict"; return (' + expression + ')')();
+                return result;
+            } catch (error) {
+                return "Invalid expression";
+            }
+        }
+    </script>
+</body>
+</html>

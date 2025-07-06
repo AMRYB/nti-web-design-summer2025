@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>test</title>
+   </head>
+   <body>
+      <button onclick="calculateSum()">Calculate Sum</button>
+      <script>
+         "use strict";
+         
+         function calculateSum() {
+             let num1 = prompt("Enter first number:");
+             let num2 = prompt("Enter second number:");
+             
+             
+             num1 = parseFloat(num1);
+             num2 = parseFloat(num2);
+             
+             let result = addNumbers(num1, num2);
+             console.log("Sum result:", result);
+         }
+      </script>
+   </body>
+</html>

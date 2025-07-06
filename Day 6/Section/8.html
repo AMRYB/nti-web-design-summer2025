@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <button onclick="collectUserInfo()">Fill Contact Form</button>
+    <div id="user-info"></div>
+
+    <script>
+        "use strict";
+        
+        function collectUserInfo() {
+            let name, birthYear;
+            
+            // name = prompt("Enter your name:");
+            // birthYear = prompt("Enter your birth year:");
+            
+            do {
+                name = prompt("Enter your name:");
+
+            } while (!name || !isNaN(name));
+            
+            do {
+                birthYear = prompt("Enter your birth year:");
+                birthYear = parseInt(birthYear);
+
+            } while (isNaN(birthYear) || birthYear >= 2010);
+            
+            let age = new Date().getFullYear() - birthYear;
+            
+            let userInfo = "<strong>Name:</strong> " + name + "<br>" +
+                          "<strong>Birth year:</strong> " + birthYear + "<br>" +
+                          "<strong>Age:</strong> " + age;
+            
+            document.getElementById('user-info').innerHTML = userInfo;
+        }
+    </script>
+</body>
+</html>

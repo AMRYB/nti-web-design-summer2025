@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>test</title>
+   </head>
+   <body>
+      <button onclick="checkAdvancedTemperature()">Check Temperature</button>
+      <script>
+         "use strict";
+         
+         function checkAdvancedTemperature(temp, actualFeel) {
+             temp = prompt("Enter temperature:");
+             actualFeel = prompt("Enter actual feel temperature:");
+             
+             temp = parseFloat(temp);
+             actualFeel = parseFloat(actualFeel);
+                         
+             let result;
+             if (temp >= 25 && temp <= 30 && actualFeel >= 25 && actualFeel <= 30) {
+                 result = "Normal";
+             } else if (temp < 25 && actualFeel < 25) {
+                 result = "Cold";
+             } else if (temp > 30 && actualFeel > 30) {
+                 result = "Hot";
+             } else {
+                 result = "Ambiguous, can't detect";
+             }
+             
+             alert(result);
+         }
+      </script>
+   </body>
+</html>

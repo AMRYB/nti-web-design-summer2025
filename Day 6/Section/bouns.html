@@ -1,0 +1,31 @@
+<!--
+<script>
+function Welcome() {
+    for (let i = 1; i <= 6; i++) {
+        document.write(`<h${i}>welcome to my page</h${i}>`);
+    }
+}
+Welcome();
+</script>
+-->
+
+<script>
+function createTable() {
+    const data = [
+        ["Name", "Ahmed"],
+        ["Birth year", "1981"],
+        ["Age", "30"]
+    ];
+
+    let table = "<table border='1'>";
+    data.forEach(row => {
+        table += "<tr>";
+        table += `<td>${row[0]}</td><td>${row[1]}</td>`;
+        table += "</tr>";
+    });
+    table += "</table>";
+
+    document.write(table);
+}
+createTable();
+</script>
